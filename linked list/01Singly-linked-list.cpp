@@ -1,6 +1,6 @@
 ﻿
 
-// 01 Singly linked list
+// 01 Singly linked list-单向链表
 /*
 	有的时候，处于内存中的数据并不是连续的。那么这时候，我们就需要在数据结构中添加一个属性，这个属性会记录下面一个数据的地址。有了这个地址之后，所有的数据就像一条链子一样串起来了，那么这个地址属性就起到了穿线连结的作用。
     相比较普通的线性结构，链表结构的优势是什么呢？我们可以总结一下：
@@ -10,6 +10,12 @@
     那么在实际应用中，链表是怎么设计的呢？我们可以以int数据类型作为基础，设计一个简单的int链表：
 */
 
+/*
+	所谓单链表，是指数据节点是单向排列的。一个单链表结点，其结构类型分为两部分：
+	1、数据域：用来存储本身数据
+	2、链域或称为指针域：用来存储下一个结点地址或者说指向其直接后继的指针。
+*/    
+
 #define FALSE 	0
 #define TRUE    1
 
@@ -18,24 +24,65 @@ typedef struct NODE
 {
 	int				value;
 	struct NODE *	next;
-}Node;
+}Node,*LinkHead;
 
-
+// 链表头结点初始化
+LinkHead = (Node *)malloc(sizeof(Node));
+assert(LinkHead != NULL,"内存分配失败");
+LinkHead->next = NULL;
+LinkHead->value = NULL;
 
 // __________________________2  创建节点__________________________
 
-Node * create()
+Node * createNode()
 {
 	Node * newNode = NULL;
 	newNode = (Node *)malloc(sizeof(Node));
-	assert(newNode != NULL);
+	assert(newNode != NULL,"createNode()faile，内存分配不了");
 
 	newNode->next = NULL;
 	return newNode;
 }
 
 
-// __________________________3  链表里面插入值 __________________________
+// __________________________3  链表里面插入新节点 __________________________
+
+insertNode(Node* const LinkHead, int new_value);		// 说明 LinkHead 的值不可以更改。
+
+insertNode(const Node*  LinkHead, int new_value);	// 说明 LinkHead 的指向的结构体的值不可以更改。这样子会不会连结构体里面的值都不可以更改呢
+/*
+	如何使用 const 限定参数：
+*/
+// 插入-有序
+bool insertNode(Node* const LinkHead, int new_value)
+{
+	Node* newNode = createNode();
+	newNode->value = new_value;
+
+	if (LinkHead->next == NULL)		//空链表
+	{
+		LinkHead->next = newNode;	
+	}else{
+		Node* next = LinkHead->next;
+		Node* prev = LinkHead;
+
+		// 寻找正确的插入位置，方法是按顺序访问链表，直到到达其值大于或等于新插入值的节点
+		while( ( next->value<new_value ) && ( next!=NULL ))
+		{
+			if( next->value == new_value )return false;		// 插入的新值 已经存在于 链表中了
+			prev = next;
+			next = prev->next;
+		}
+
+		prev->next = newNode;
+		newNode->next = next;
+	}
+
+	return true;
+}
+
+
+
 // 程序12.3 插入到一个有序的单链表：最终版本【来源于《C和指针》的习题】
 int thr_insert(Node  **pRoot, int new_value)
 {
@@ -67,13 +114,25 @@ result = thr_insert(&root,12);
 
 
 // __________________________4  删除链表 __________________________
-
+void delateList(const Node* pRoot)
+{
+	while(pRoot != NULL)
+	{
+		Node* pNext = pRoot->next;
+		free(pRoot);
+		pRoot = pNext;
+	}
+}
 
 
 
 
 
 // __________________________5  查找数据 __________________________
+/*
+	对单链表进行查找的思路为：对单链表的结点依次扫描，检测其数据域是否是我们所要查好的值，若是返回该结点的指针，否则返回NULL。
+	因为在单链表的链域中包含了后继结点的存储地址，所以当我们实现的时候，只要知道该单链表的头指针，即可依次对每个结点的数据域进行检测。 
+*/
 Node* findDate(const Node* pRoot,int value)
 {
 	while(pRoot != NULL)
@@ -82,7 +141,11 @@ Node* findDate(const Node* pRoot,int value)
 		pRoot = pRoot->next;
 	}
 
-	return pRoot;		// 返回NULL 就是没有找到 
+	if(pRoot == NULL)
+	{
+		printf("没有查找到该数据")
+	}
+	return pRoot;		
 }
 
 
