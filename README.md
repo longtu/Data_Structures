@@ -37,3 +37,15 @@ Data structures
     if x > y:
         print x
 		
+		
+### GitHub中README.md添加图片方式
+
+首先找到repo中图片，点击图片可获得路径，如：
+
+https@//github.com/younghz/Markdown/blob/master/Res/Aaron_Swartz.jpg
+以Markdown语法如：
+
+![Aaron Swartz](https://github.com/younghz/Markdown/raw/master/Res/Aaron_Swartz.jpg)形式添加到README文件中即可，但是需要注意的是在下面的链接中需将blob改为raw。
+
+		
+		
