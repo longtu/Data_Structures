@@ -15,8 +15,9 @@ http://www.nowamagic.net/librarys/veda/detail/2220
 这里有个地方要注意，就是对头指针概念的理解，这个很重要。“链表中第一个结点的存储位置叫做头指针”，
 如果链表有头结点，那么头指针就是指向头结点数据域的指针。画一个图吧。
 
-图1
-https://github.com/vo01github/Data_Structures/raw/master/linear%20list/pic/linked_list_0.jpg
+
+![图1](https://github.com/vo01github/Data_Structures/raw/master/linear%20list/pic/linked_list_0.jpg)
+
 
 **头结点，我们就可以这么描述了：**
 * 头结点是为了操作的统一与方便而设立的，放在第一个元素结点之前，
@@ -39,6 +40,5 @@ https://github.com/vo01github/Data_Structures/raw/master/linear%20list/pic/linke
 
 单链表也可以没有头结点。如果没有头结点的话，那么单链表就会变成这样：
 
-图2
-https://github.com/vo01github/Data_Structures/raw/master/linear%20list/pic/linked_list_1.jpg
+![图2](https://github.com/vo01github/Data_Structures/raw/master/linear%20list/pic/linked_list_1.jpg)
 
