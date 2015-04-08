@@ -24,9 +24,9 @@ typedef struct NODE
 {
 	int				value;
 	struct NODE *	next;
-}Node,*LinkHead;
+}Node,*LinkHead;		// LinkHead 是头指针，*LinkHead 是头结点
 
-// 链表头结点初始化
+// 链表 头结点+头指针 初始化
 LinkHead = (Node *)malloc(sizeof(Node));
 assert(LinkHead != NULL,"内存分配失败");
 LinkHead->next = NULL;
