@@ -5,6 +5,9 @@ linear list
 
 ## 链式存储结构
 
+
+![图1](https://github.com/vo01github/Data_Structures/raw/master/linear%20list/pic/linear_list.png)
+
 ### Linked list 链表
 
 链表（Linked list）是一种常见的基础数据结构，是一种线性表，但是并不会按线性的顺序存储数据，而是在每一个节点里存到下一个节点的指针(Pointer)。

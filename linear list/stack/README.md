@@ -23,4 +23,5 @@ http://www.nowamagic.net/librarys/veda/detail/2269
 
 栈的插入操作，叫作进栈，也称压栈、入栈。栈的删除操作，叫作出找，也有的叫作弹栈。
 
-图1
+
+![图1](https://github.com/vo01github/Data_Structures/raw/master/linear%20list/pic/stack01.jpg)
