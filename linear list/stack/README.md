@@ -25,3 +25,60 @@ http://www.nowamagic.net/librarys/veda/detail/2269
 
 
 ![图1](https://github.com/vo01github/Data_Structures/raw/master/linear%20list/pic/stack01.jpg)
+
+
+### 栈的抽象数据类型ADT-定义我们需要实现的栈的操作
+
+http://www.nowamagic.net/librarys/veda/detail/2270
+
+
+对于栈来讲，理论上线性表的操作特性它都具备，可由于它的特殊性，所以针对它在操作上会有些变化。特别是插入和删除操作，我们改名为push和pop,英文直译的话是压和弹，更容易理解。你就把它当成是弹夹的子弹压入和弹出就好记忆了，我们一般叫进栈和出栈。
+
+栈的抽象数据类型ADT定义如下：
+
+ADT 栈(stack)
+Data
+	同线性表。元素具有相同的类型，相邻元素具有前驱和后堆关系。
+Operation
+	InitStack ( *S )：初始化操作.建立一个空栈S。
+	DestroyStack ( *S )：若栈存在，則销毁它。
+	ClearStack (*S)：将栈清空。
+	StackEmpty ( S ):若栈为空，返回true,否則返回 false。
+	GetTop (S,*e)：若栈存在且非空，用e返回S的栈顶元素。
+	Push (*S,e)：若栈S存在，插入新元素e到栈S中并成为栈頂元素。
+	Pop (*S,*e)：删除栈S中栈顶元素，并用e返回其值。
+	StackLength (S)：返回回栈S的元素个数。
+endADT
+
+
+由于栈本身就是一个线性表，那么前一个专题我们讨论了线性表的顺序存储和链式存储，对于栈来说，也是同样适用的。后面我们就研究栈的顺序存储与链式存储，并实现ADT里定义的各种操作。
+
+
+### 顺序栈：栈的顺序存储结构-栈的结构体定义
+
+http://www.nowamagic.net/librarys/veda/detail/2271
+
+既然栈是线性表的特例，那么栈的顺序存储其实也是线性表顺序存储的简化，我们将其简称为顺序栈。
+
+线性表是用数组来实现的，对于栈这种只能一头插入删除的线性表来说，用数组哪一端来作为栈顶和栈底比较好？
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
