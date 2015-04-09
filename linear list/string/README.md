@@ -99,7 +99,8 @@ http://www.nowamagic.net/librarys/veda/detail/2405
 
 但也有些编程语言不想这么干，觉得存个数字占个空间麻烦。它规定在串值后面加一个不计入串长度的结束标记字符，比如“\o”来表示串值的终结，这个时候，你要想知道此时的串长度，就需要遍历计算一下才知道了，其实这还是需要占用一个空间。【C语言-C++语言】
 
-图1
+![图1](https://github.com/vo01github/Data_Structures/raw/master/linear%20list/pic/string01.jpg)
+
 
 刚才讲的串的顺序存储方式其实是有问题的，因为字符串的操作，比如两串的连接Concat、新串的插入Strlnsert、以及字符串的替换Replace，都有可能使得串序列的长度超过了数组的长度MaxSize。
 
