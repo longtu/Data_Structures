@@ -52,9 +52,12 @@ Heap
 **堆排序实现原理**
 
 
-图1
-图2
-图3
+![图1](https://github.com/vo01github/Data_Structures/raw/master/pic/heap01.jpg)
+
+![图2](https://github.com/vo01github/Data_Structures/raw/master/pic/heap02.jpg)
+
+![图3](https://github.com/vo01github/Data_Structures/raw/master/pic/heap03.jpg)
+
 
 
 void HeapSort(int num[] ,int size)
