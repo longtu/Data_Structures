@@ -34,6 +34,17 @@ Data structures
 
 
 ## Markdown学习教程==================================================
+
+MarkdownPad编辑器 使用
+粗体 (Ctrl+B) and 斜体 (Ctrl+I)
+引用 (Ctrl+Q)
+代码块 (Ctrl+K)
+标题 1, 2, 3 (Ctrl+1, Ctrl+2, Ctrl+3)
+列表 (Ctrl+U and Ctrl+Shift+O)
+
+
+
+
 字体 Styling Text：
 斜体： *This text will be italic*  （对应HTML中的标签）
 粗体：**This text will be bold** （对应HTML中的标签）
