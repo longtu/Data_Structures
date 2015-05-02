@@ -224,3 +224,45 @@ int sum_node(const Node* pRoot)
 
 // __________________________9  合并2个链表 __________________________
 
+
+
+
+
+// __________________________10  逆转单链表 __________________________
+/*
+	注意事项：
+	01 参数必须是引用，要不然需要传入2级指针，或者返回一个 头指针。
+	02 写 中间过程时，脑袋要清醒，这里有点绕
+*/
+
+
+// for循环版本
+void reverse_node(Node * &pRoot)
+{
+	// 错误处理
+	if( pRoot == NULL)assert("reverse_node() import is Wrong!")
+
+	// 指针初始化
+	Node * thisNode = pRoot;
+	Node * nextNode = thisNode->next;
+	Node * prevNode;
+
+	// 链表尾
+	thisNode->next = NULL;
+
+	// 中间节点的处理
+	while( nextNode != NULL)
+	{
+		prevNode = thisNode;
+		thisNode = nextNode;
+		nextNode = thisNode->next;
+
+		thisNode->next = prevNode;
+	}
+
+	// 更改头指针
+	pRoot = thisNode;
+}
+
+
+// 迭代版本：这个就 非常耗内存空间【随着链表长度的增加，占用栈进程的空间也跟着增加】了。
