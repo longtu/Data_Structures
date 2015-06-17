@@ -1,0 +1,15 @@
+链表问题汇总
+
+http://mingxinglai.com/cn/2012/09/linked-list-problem/
+
+1 - 查看链表操作的基础技巧。
+2 - 18 道链表问题。
+3 - 解决所有的 链表问题。
+
+Abstract
+This document reviews basic linked list code techniques and then works through 18 linked list problems covering a wide range of difficulty. Most obviously, these problems are a way to learn about linked lists. More importantly, these problems are a way to develop your ability with complex pointer algorithms. Even though modern languages and tools have made linked lists pretty unimportant for day-to-day programming, the skills for complex pointer algorithms are very important, and linked lists are an excellent way to develop those skills.
+The problems use the C language syntax, so they require a basic understanding of C and its pointer syntax. The emphasis is on the important concepts of pointer manipulation and linked list algorithms rather than the features of the C language. For some of the problems we present multiple solutions, such as iteration vs. recursion, dummy node vs. local reference. The specific problems are,in rough order of difficulty: Count GetNth DeleteList Pop InsertNth SortedInsert InsertSort Append FrontBackSplit RemoveDuplicates MoveNode AlternatingSplit ShuffleMerge SortedMerge SortedIntersect Reverse and RecursiveReverse.
+Contents
+Section 1 — Review of basic linked list code techniques
+Section 2 — 18 list problems in increasing order of difficulty
+Section 3 — Solutions to all the problems
