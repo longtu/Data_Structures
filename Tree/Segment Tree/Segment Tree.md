@@ -287,7 +287,7 @@ http://poj.org/summerschool/1_interval_tree.pdf
 
 ## 优化 和 其他
 
-线段树为什么要开4倍空间
+线段树需要的空间为数组大小的四倍，线段树为什么要开4倍空间？
 >
 http://scinart.github.io/acm/2014/03/19/acm-segment-tree-space-analysis/
 
