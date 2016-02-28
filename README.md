@@ -71,5 +71,4 @@ https@//github.com/younghz/Markdown/blob/master/Res/Aaron_Swartz.jpg
 
 ![Aaron Swartz](https://github.com/younghz/Markdown/raw/master/Res/Aaron_Swartz.jpg)形式添加到README文件中即可，但是需要注意的是在下面的链接中需将blob改为raw。
 
-		
-		
+![背景资料](pic/APK解包图.png "背景资料") 背景资料是父级文件夹	
